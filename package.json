@@ -2,7 +2,9 @@
   "name": "adhil-portfolio",
   "version": "1.0.0",
   "private": true,
-    "homepage": "https://adhilpk3376.github.io/adhil-portfolio",
+
+    "homepage": "https://adhil-pk.github.io/adhil-portfolio",
+
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "framer-motion": "^11.0.0",
