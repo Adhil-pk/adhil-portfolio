@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/adhil-portfolio/static/css/main.91582381.css",
+    "main.js": "/adhil-portfolio/static/js/main.e6d8d860.js",
+    "index.html": "/adhil-portfolio/index.html",
+    "main.91582381.css.map": "/adhil-portfolio/static/css/main.91582381.css.map",
+    "main.e6d8d860.js.map": "/adhil-portfolio/static/js/main.e6d8d860.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91582381.css",
+    "static/js/main.e6d8d860.js"
+  ]
+}
