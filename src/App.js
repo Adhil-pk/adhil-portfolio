@@ -1,4 +1,4 @@
-
+import profileImg from './assets/IMG_6926.jpg';
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './styles.css';
@@ -135,7 +135,7 @@ const Hero = () => {
           <div className="image-glow">
            <div className="profile-ring">
             <div className="profile-image">
-             <img src="/IMG_6926.jpg" alt="Adhil Profile" />
+             <img src={profileImg} alt="Adhil Profile" />
             </div>
           </div>
          </div>
@@ -344,14 +344,40 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const data = {
+    access_key: "736e23c6-a425-4d5e-8b8d-28a6ce3c81d8", // 🔴 your key
+    name: formData.name,
+    email: formData.email,
+    message: formData.message,
   };
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+
+      setTimeout(() => setSubmitted(false), 3000);
+    } else {
+      alert("Failed to send message");
+    }
+  } catch (error) {
+    alert("Something went wrong!");
+  }
+};
+
 
   return (
     <section id="contact" className="contact-section">
@@ -444,7 +470,7 @@ const App = () => {
       <Contact />
       
       <footer className="footer">
-        <p>&copy; 2024 Adhil. All rights reserved.</p>
+        <p>&copy; 2026 Adhil. All rights reserved.</p>
         <p className="footer-tagline">Securing the Digital Future</p>
       </footer>
     </div>
