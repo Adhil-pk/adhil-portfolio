@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/adhil-portfolio/static/css/main.0a05ae8e.css",
-    "main.js": "/adhil-portfolio/static/js/main.46379081.js",
+    "main.js": "/adhil-portfolio/static/js/main.c2e062d1.js",
     "static/media/IMG_6926.jpg": "/adhil-portfolio/static/media/IMG_6926.4aeab60e768968498296.jpg",
     "index.html": "/adhil-portfolio/index.html",
     "main.0a05ae8e.css.map": "/adhil-portfolio/static/css/main.0a05ae8e.css.map",
-    "main.46379081.js.map": "/adhil-portfolio/static/js/main.46379081.js.map"
+    "main.c2e062d1.js.map": "/adhil-portfolio/static/js/main.c2e062d1.js.map"
   },
   "entrypoints": [
     "static/css/main.0a05ae8e.css",
-    "static/js/main.46379081.js"
+    "static/js/main.c2e062d1.js"
   ]
 }
