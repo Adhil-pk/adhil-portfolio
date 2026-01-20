@@ -85,7 +85,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-        >
+          >
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -113,17 +113,29 @@ const Hero = () => {
             Dedicated to ethical hacking, penetration testing, and building secure systems in an ever-evolving digital landscape.
           </motion.p>
           
-          <motion.button
-            className="cta-button"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0, 255, 255, 0.6)' }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-          >
-            Get In Touch
-          </motion.button>
+          <div className="hero-buttons">
+  <motion.button className="cta-button">
+    Get In Touch
+  </motion.button>
+
+  <a
+    href="https://github.com/adhil-pk"
+    target="_blank"
+    rel="noreferrer"
+    className="cta-button"
+  >
+    GitHub Projects
+  </a>
+
+  <a
+    href="/Adhil_CV.pdf"
+    download
+    className="cta-button"
+  >
+    Download CV
+  </a>
+</div>
+
         </motion.div>
         
         <motion.div 
@@ -217,20 +229,20 @@ const Journey = () => {
   const journeyItems = [
     {
       year: '2023 - Present',
-      title: 'Advanced Cyber Security Studies',
-      description: 'Deep diving into advanced penetration testing, malware analysis, and security research. Actively participating in bug bounty programs and CTF competitions.',
+      title: 'Cyber Security Studies',
+      description: 'Learning and practicing penetration testing fundamentals, malware basics, and security concepts. Actively improving skills through labs, CTF challenges, and hands-on security research.',
       icon: '🎓'
     },
     {
       year: '2022 - 2023',
       title: 'Network Security & Ethical Hacking',
-      description: 'Completed comprehensive training in network security, focusing on firewall configuration, intrusion detection systems, and ethical hacking methodologies.',
+      description: 'Completed structured training in network security, covering firewall concepts, intrusion detection systems, and ethical hacking fundamentals with hands-on lab practice.',
       icon: '🔐'
     },
     {
       year: '2021 - 2022',
       title: 'Linux & Web Security Fundamentals',
-      description: 'Mastered Linux system administration and web application security testing, including OWASP Top 10 vulnerabilities and secure coding practices.',
+      description: 'Trained in network security fundamentals, including firewall configuration basics, intrusion detection concepts, and ethical hacking methodologies through practical labs.',
       icon: '💻'
     },
     {
@@ -286,12 +298,12 @@ const Journey = () => {
 // Skills Section
 const Skills = () => {
   const skills = [
-    { name: 'Ethical Hacking', level: 90 },
-    { name: 'Cyber Security', level: 85 },
-    { name: 'Linux Administration', level: 88 },
-    { name: 'Network Security', level: 82 },
-    { name: 'Web Security', level: 87 },
-    { name: 'CTF Challenges', level: 80 }
+    { name: 'Ethical Hacking', level: 70 },
+    { name: 'Cyber Security', level: 60 },
+    { name: 'Linux Administration', level: 78 },
+    { name: 'Web Vulnerability Testing (Burp Suite)', level: 65 },
+    { name: 'AI-based front-end Design', level: 85 },
+    { name: 'Red Team Techniques', level: 65 }
   ];
 
   return (
