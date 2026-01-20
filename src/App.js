@@ -114,7 +114,12 @@ const Hero = () => {
           </motion.p>
           
           <div className="hero-buttons">
-  <motion.button className="cta-button">
+  <motion.button
+    className="cta-button"
+    onClick={() =>
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+    }
+  >
     Get In Touch
   </motion.button>
 
@@ -128,13 +133,14 @@ const Hero = () => {
   </a>
 
   <a
-    href="/Adhil_CV.pdf"
+    href="/adhil-portfolio/Adhil_CV.pdf"
     download
     className="cta-button"
   >
     Download CV
   </a>
 </div>
+
 
         </motion.div>
         
